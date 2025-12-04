@@ -34,13 +34,18 @@ The following Python libraries are used in this project:
 - Analyzed correlations between GLD and other features (SPX, USO, SLV, EUR/USD).
 - Visualized data distributions using plots.
 
-### 3. Model Building
+### 3. Models Implemented
+- **Linear Regression**: Baseline model to measure performance against more complex algorithms.
+- **Random Forest Regressor**: Ensemble model using multiple decision trees; improves accuracy and reduces overfitting.
+- **XGBoost**: More advanced ensemble technique that improves prediction by sequentially learning from errors.
+
+### 4. Model Building
 - **Model**: Random Forest Regressor.
 - **Feature Engineering**: Created lag features for GLD and EUR/USD to capture temporal dependencies.
 - **Data Splitting**: Split the data into training and testing sets.
 - **Scaling**: Used `StandardScaler` to normalize the features for linear regression.
 
-### 4. Model Evaluation
+### 5. Model Evaluation
 The model was evaluated using the following metrics:
 - **R-squared (R2) Score**: Indicates the proportion of the variance in the dependent variable that is predictable from the independent variables.
 - **Mean Absolute Error (MAE)**: The average of the absolute errors.
@@ -55,7 +60,10 @@ The Random Forest Regressor achieved high accuracy on the test set:
 - **RMSE**: ~0.8993
 
 
-## How to Run
-1. Install the required libraries using `pip install -r requirements.txt`.
-2. Place the `gold price dataset.csv` in the project directory.
-3. Open and run the `gold_price.ipynb` notebook in a Jupyter environment.
+## How to Run the project
+1. Install the required dependancies
+   ```
+   pip install -r requirements.txt`.
+   ```
+3. Place the `gold price dataset.csv` in the project directory.
+4. Open and run the `gold_price.ipynb` notebook in a Jupyter environment.
